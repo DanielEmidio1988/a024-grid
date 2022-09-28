@@ -1,16 +1,50 @@
+/* # Exercício 1
+
+Utilize `grid-template` na barra de navegação e na área de galeria, com as 
+seguintes instruções:
+
+  - Barra de navegação:
+    - apenas uma coluna;
+    - 3 linhas, sendo as duas últimas com 40px, e a primeira com todo o espaço restante
+    
+- Galeria:
+  - 3 colunas
+  - 8 linhas de 100px cada
+
+
+  # Exercício 2
+
+Utilize `justify-items` e `align-items` para centralizar os itens da navegação e da galeria.
+
+# Exercício 3
+
+Utilizando `grid-row` e `grid-column`, reorganize a galeria de forma a ficar 
+como na imagem de exemplo. */
+
 * {
     padding: 0;
     margin: 0;
+    /* box-sizing: border-box; */
   }
   
   .nav-container {
     margin-top: 20px;
+    display: grid;
+    grid-template: 1fr 40px 40px / 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: orange;
   }
   
   .gallery {
     width: 900px;
     height: 800px;
     margin: 0 auto;
+    display: grid;
+    grid-template: (8, 100px) / (3, 1fr);
+    justify-items: center;
+    align-items: center;
+    background-color: orangered;
   }
   
   .gallery img {
@@ -19,30 +53,45 @@
   }
   
   #img-1 {
+    display: flex;
+    grid-row: 1/span 4;
+    grid-column: 1/span 1;
 
   }
   
   #img-2 {
-
+    display: flex;
+    grid-row: 1/span 2;
+    grid-column: 2/span 1;
   }
   
   #img-3 {
-  
+    display: flex;
+    grid-row: 1/span 6;
+    grid-column: 3/span 1;  
   }
   
   #img-4 {
-
+    display: flex;
+    grid-row: 5/span 4;
+    grid-column: 1/span 1;
   }
   
   #img-5 {
-
+    display: flex;
+    grid-row: 3/span 3;
+    grid-column: 2/span 1;
   }
   
   #img-6 {
-
+    display: flex;
+    grid-row: 7/span 2;
+    grid-column: 3/span 1;
   }
   
   #img-7 {
-
+    display: flex;
+    grid-row: 6/span 3;
+    grid-column: 1/span 3;
   }
   
